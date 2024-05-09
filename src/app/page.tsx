@@ -3,22 +3,23 @@ export default function Home() {
 
     <div>
       <section style={{ height: '100vh' }} className="flex justify-center items-center">
-        <div className="size-3/4 bg-red-500">
+        <div className="size-3/4 flex items-center">
+          <h1 className="text-2xl text-center">"Hello! I'm a passionate web developer committed to mastering new technologies to craft dynamic and responsive websites. Let's innovate together!"
+          </h1>
         </div>
       </section>
 
       <section style={{ height: '100vh' }} className="flex justify-center items-center">
-        <div className="size-3/4 bg-blue-500">
+        <div className="w-full h-full">
         </div>
       </section>
 
       <section style={{ height: '100vh' }} className="flex justify-center items-center">
-        <div className="size-5/6 bg-green-500">
+        <div className="w-full h-full">
         </div>
       </section>
 
     </div>
-
 
   )
 }
