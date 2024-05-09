@@ -1,3 +1,5 @@
+import Skills from "@/components/Skills"
+
 export default function Home() {
   return (
 
@@ -10,7 +12,8 @@ export default function Home() {
       </section>
 
       <section style={{ height: '100vh' }} className="flex justify-center items-center">
-        <div className="w-full h-full">
+        <div className="size-3/4 flex justify-center items-center">
+          <Skills />
         </div>
       </section>
 
