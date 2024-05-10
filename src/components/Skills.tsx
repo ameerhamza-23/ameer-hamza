@@ -3,49 +3,49 @@ export default function Skills() {
         <div className="container">
             <div className="hexagonArea first">
                 <div className="hexagon">
-                    <h3>S1</h3>
+                    <img src="react.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S2</h3>
+                    <img src="nodejs.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S3</h3>
+                    <img src="mongo.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S4</h3>
+                    <img src="next.svg" />
                 </div>
             </div>
 
             <div className="hexagonArea second">
                 <div className="hexagon">
-                    <h3>S5</h3>
+                    <img src="tailwind.png" alt="" />
                 </div>
                 <div className="hexagon">
-                    <h3>S6</h3>
+                    <img src="django.svg" width={55} height={55} alt="" />
                 </div>
                 <div className="hexagon">
-                    <h3>S7</h3>
+                    <img src="docker.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S3</h3>
+                    <img src="redux.svg" width={65} height={60} />
                 </div>
                 <div className="hexagon">
-                    <h3>S4</h3>
+                    <img src="git.png" />
                 </div>
             </div>
 
             <div className="hexagonArea first">
                 <div className="hexagon">
-                    <h3>S1</h3>
+                    <img src="javascript.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S2</h3>
+                    <img src="python.svg" alt="" />
                 </div>
                 <div className="hexagon">
-                    <h3>S3</h3>
+                    <img src="cpp.svg" />
                 </div>
                 <div className="hexagon">
-                    <h3>S4</h3>
+                    <img src="typescript.svg" width={65} height={60} />
                 </div>
             </div>
         </div>

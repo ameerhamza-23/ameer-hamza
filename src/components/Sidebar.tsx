@@ -1,21 +1,41 @@
-export default function Sidebar() {
-    return (
-        <div className="flex flex-col items-center gap-2 justify-center fixed" style={{height:'100vh'}}>
+'use client'
+// components/Sidebar.tsx
+import React, { useState, useEffect } from 'react';
 
-            <div className="size-8 rounded-full bg-red-500 flex justify-center items-center">1</div>
-                
-            <div className="w-0.5 h-48 bg-black rounded-lg">
+const Sidebar: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
-            </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const sections = document.querySelectorAll('section');
 
-            <div className="size-8 rounded-full border-black flex justify-center items-center" style={{borderWidth:'1px'}}>2</div>
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-            <div className="w-0.5 h-48 bg-black rounded-lg">
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          setActiveSection(section.id);
+        }
+      });
+    };
 
-            </div>
+    window.addEventListener('scroll', handleScroll);
 
-            <div className="size-8 rounded-full border-black flex justify-center items-center" style={{borderWidth:'1px'}}>3</div>
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-        </div>
-    )
-}
+  return (
+    <div className="flex flex-col items-center gap-2 justify-center fixed" style={{ height: '100vh' }}>
+      <div className={`size-4 md:size-8 rounded-full flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section1' ? 'bg-gradient-to-r from-red-400 to-red-900' : ''}`} ></div>
+      <div className="bg-black rounded-lg" style={{ width: '4%', height: '30%' }}></div>
+      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section2' ? 'bg-gradient-to-r from-emerald-500 to-emerald-900' : ''}`} ></div>
+      <div className="bg-black rounded-lg" style={{ width: '4%', height: '30%' }}></div>
+      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section3' ? 'bg-gradient-to-r from-slate-500 to-slate-800' : ''}`} ></div>
+    </div>
+  );
+};
+
+export default Sidebar;
