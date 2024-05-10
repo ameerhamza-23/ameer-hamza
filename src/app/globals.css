@@ -12,3 +12,28 @@ section {
     height: 100vh;
     scroll-snap-stop: always;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .hexagonArea {
+    display: flex;
+}
+
+.container .hexagonArea .hexagon {
+    position: relative;
+    width: 90px;
+    height: 100px;
+    margin: 0 5px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    flex-direction: column;   
+}
