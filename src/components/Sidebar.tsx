@@ -28,12 +28,12 @@ const Sidebar: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-2 justify-center fixed" style={{ height: '100vh' }}>
-      <div className={`size-4 md:size-8 rounded-full flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section1' ? 'bg-gradient-to-r from-red-400 to-red-900' : ''}`} ></div>
+    <div className="hidden md:flex flex flex-col items-center gap-2 justify-center fixed" style={{ height: '100vh' }}>
+      <div className={`size-4 md:size-8 rounded-full flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section1' ? 'bg-gradient-to-r from-red-400 to-red-900 text-white' : ''}`} >1</div>
       <div className="bg-black rounded-lg" style={{ width: '4%', height: '30%' }}></div>
-      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section2' ? 'bg-gradient-to-r from-emerald-500 to-emerald-900' : ''}`} ></div>
+      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section2' ? 'bg-gradient-to-r from-emerald-500 to-emerald-900 text-white' : ''}`} >2</div>
       <div className="bg-black rounded-lg" style={{ width: '4%', height: '30%' }}></div>
-      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section3' ? 'bg-gradient-to-r from-slate-500 to-slate-800' : ''}`} ></div>
+      <div className={`size-4 md:size-8 rounded-full border-black flex justify-center items-center transition-colors duration-300 ease-in-out ${activeSection === 'section3' ? 'bg-gradient-to-r from-slate-500 to-slate-800 text-white' : ''}`} >3</div>
     </div>
   );
 };
