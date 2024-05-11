@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "../components/Sidebar";
-import Head from 'next/head'; 
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -17,11 +16,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Add favicon */}
-        <link rel="ico" type="image/ico" href="person.ico" />
-        {/* Add other meta tags or links here if needed */}
-      </Head>
       <body className="flex bg-gradient-to-br from-gray-100 to-gray-300">
 
         <div style={{width:'90%'}}>
