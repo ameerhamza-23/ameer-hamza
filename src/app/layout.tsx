@@ -18,11 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex bg-gradient-to-br from-gray-100 to-gray-300">
 
-        <div style={{width:'90%'}}>
+        <div className="body">
           {children}  
         </div>
 
-        <div style={{width:'10%'}}>
+        <div className="sidebar">
           <Sidebar />
         </div>
 

@@ -27,11 +27,8 @@ export default function Home() {
       </section>
 
       <section id="section2" style={{ height: '100vh' }} className="flex flex-col justify-center items-center">
-        <h1 className="text-md sm:text-lg md:text-2xl pl-8 text-green-900 font-medium">Technologies i Work With</h1>
-        <div className="size-3/4 flex justify-center items-center hidden md:block md:p-8">
-          <Skills />
-        </div>
-        <div className="grid grid-cols-4 gap-7 p-8 items-center md:hidden">
+        <h1 className="text-md sm:text-lg md:text-2xl pl-8 text-green-900 font-medium text-center md:p-10">Technologies i Work With</h1>
+        <div className="grid grid-cols-4 gap-7 md:gap-20 p-8 items-center justify-center">
           <div className="w-14 h-14 flex items-center">
             <img src="react.svg" />
           </div>
@@ -60,20 +57,20 @@ export default function Home() {
             <img src="git.png" />
           </div>
           <div className="w-14 h-14 flex items-center">
-            <img src="javascript.svg" />
+            <img src="javascript.svg" width={55} height={55}/>
           </div>
           <div className="w-14 h-14 flex items-center">
             <img src="python.svg" alt="" />
           </div>
           <div className="w-14 h-14 flex items-center">
-            <img src="typescript.svg" width={65} height={60} />
+            <img src="typescript.svg" width={55} height={55} />
           </div>
         </div>
       </section>
 
       <section id="section3" className="flex justify-center h-auto" style={{ minHeight: '100vh' }}>
-        <div className="w-full h-full">
-          <h1 className="text-md sm:text-2xl p-4 sm:p-6 md:p-8 text-center text-gray-800 font-medium">My Projects</h1>
+        <div className="w-3/4 md:w-full h-full">
+          <h1 className="text-md sm:text-2xl p-6 md:p-8 text-center text-gray-800 font-medium">Projects</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:p-4 md:p-8">
             <ProjectCard title="Peer Pulse" description={Descriptions[0]} github={github[0]} />
             <ProjectCard title="Campus Books" description={Descriptions[1]} github={github[1]} />
