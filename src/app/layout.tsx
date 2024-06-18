@@ -16,14 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex bg-gradient-to-br from-gray-100 to-gray-300">
+      <body className="">
 
         <div className="body">
           {children}  
-        </div>
-
-        <div className="sidebar">
-          <Sidebar />
         </div>
 
         </body>
